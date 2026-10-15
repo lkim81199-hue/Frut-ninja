@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Фруктовый ниндзя</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<div id="hud">
+  <div id="score-box">
+    <div id="score-label">СЧЁТ</div>
+    <div id="score">0</div>
+    <div id="best">Рекорд: 0</div>
+  </div>
+  <div id="lives"></div>
+</div>
+
+<div id="combo"></div>
+
+<!-- ЭКРАН ВЫБОРА КЛИНКА -->
+<div id="menu">
+  <div class="menu-panel">
+    <h1>ВЫБЕРИ КЛИНОК</h1>
+
+    <div class="section-label">КЛИНОК</div>
+    <div id="blades" class="blades"></div>
+
+    <div class="section-label">ЦВЕТ СЛЕДА</div>
+    <div id="colors" class="colors"></div>
+
+    <div class="row-buttons">
+      <button id="start-btn">В БОЙ!</button>
+      <button id="leaders-btn" class="ghost">ТАБЛИЦА ЛИДЕРОВ</button>
+    </div>
+  </div>
+</div>
+
+<!-- ЭКРАН ПРОИГРЫША -->
+<div id="gameover" class="hidden">
+  <div class="panel">
+    <h1>ИГРА ОКОНЧЕНА</h1>
+    <p class="final-label">Ваш счёт</p>
+    <p id="final-score">0</p>
+    <p class="final-label">Рекорд</p>
+    <p id="final-best">0</p>
+    <div class="row-buttons">
+      <button id="restart">ЕЩЁ РАЗ</button>
+      <button id="to-menu" class="ghost">СМЕНИТЬ КЛИНОК</button>
+    </div>
+  </div>
+</div>
+
+<!-- ЭКРАН ВВОДА ИМЕНИ -->
+<div id="nameover" class="hidden">
+  <div class="panel">
+    <h1>НОВЫЙ РЕКОРД!</h1>
+    <p class="final-label">Ваш счёт</p>
+    <p id="name-score">0</p>
+    <p class="final-label">Введите имя</p>
+    <input id="name-input" type="text" maxlength="12" autocomplete="off" placeholder="Ниндзя" />
+    <div class="row-buttons">
+      <button id="name-save">СОХРАНИТЬ</button>
+      <button id="name-skip" class="ghost">ПРОПУСТИТЬ</button>
+    </div>
+  </div>
+</div>
+
+<!-- ЭКРАН ТАБЛИЦЫ ЛИДЕРОВ -->
+<div id="leaders" class="hidden">
+  <div class="panel">
+    <h1>ТАБЛИЦА ЛИДЕРОВ</h1>
+    <div id="leaders-list" class="leaders-list"></div>
+    <div class="row-buttons">
+      <button id="leaders-play">ИГРАТЬ</button>
+      <button id="leaders-close" class="ghost">НАЗАД</button>
+      <button id="leaders-clear" class="ghost">ОЧИСТИТЬ</button>
+    </div>
+  </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
